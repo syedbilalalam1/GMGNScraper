@@ -1,0 +1,106 @@
+2025-09-17 22:06:39,034 [INFO] App started
+2025-09-17 22:08:40,445 [INFO] Start clicked
+2025-09-17 22:08:40,450 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-17 22:08:40,452 [INFO] Running puppeteer-extra script: node D:\GITHUB PROJECTSS BACKED UP\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\.sessions\gmgn_ai_session.json
+2025-09-17 22:08:40,498 [ERROR] Node puppeteer run failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\gmgn_gui.py", line 269, in run_node_puppeteer
+    proc = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-09-17 22:08:40,512 [INFO] Saved 0 addresses to D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\output\gmgn_addresses.csv
+2025-09-17 22:08:43,470 [INFO] Start clicked
+2025-09-17 22:08:43,471 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True engine=puppeteer
+2025-09-17 22:08:43,475 [INFO] Running puppeteer-extra script: node D:\GITHUB PROJECTSS BACKED UP\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless true --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\.sessions\gmgn_ai_session.json
+2025-09-17 22:08:43,515 [ERROR] Node puppeteer run failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\gmgn_gui.py", line 269, in run_node_puppeteer
+    proc = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-09-17 22:08:43,517 [INFO] Saved 0 addresses to D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\output\gmgn_addresses.csv
+2025-09-17 22:08:54,735 [INFO] Start clicked
+2025-09-17 22:08:54,736 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=playwright
+2025-09-17 22:09:02,993 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-17 22:09:04,531 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=12772
+[pid=12772][out] Opening in existing browser session.
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=12772
+  - [pid=12772][out] Opening in existing browser session.
+
+2025-09-17 22:09:27,473 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-17 22:09:28,227 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=11968
+[pid=11968][out] Opening in existing browser session.
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=11968
+  - [pid=11968][out] Opening in existing browser session.
+
+2025-09-17 22:09:31,496 [ERROR] Scrape failed: RetryError[<Future at 0x22d15129120 state=finished raised TargetClosedError>]
+Traceback (most recent call last):
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 427, in scrape_gmgn
+    await page.goto(url, wait_until="domcontentloaded")
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\playwright\async_api\_generated.py", line 8805, in goto
+    await self._impl_obj.goto(
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\playwright\_impl\_page.py", line 524, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\playwright\_impl\_frame.py", line 145, in goto
+    await self._channel.send("goto", locals_to_params(locals()))
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: Page.goto: Target page, context or browser has been closed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\gmgn_gui.py", line 188, in run_scrape
+    addrs = scrape_gmgn_sync(
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 520, in scrape_gmgn_sync
+    return asyncio.run(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\venv\lib\site-packages\tenacity\__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x22d15129120 state=finished raised TargetClosedError>]
+2025-09-17 22:09:35,552 [INFO] Start clicked
+2025-09-17 22:09:35,555 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-17 22:09:35,557 [INFO] Running puppeteer-extra script: node D:\GITHUB PROJECTSS BACKED UP\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\.sessions\gmgn_ai_session.json
+2025-09-17 22:09:35,598 [ERROR] Node puppeteer run failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\gmgn_gui.py", line 269, in run_node_puppeteer
+    proc = subprocess.Popen(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\subprocess.py", line 1456, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-09-17 22:09:35,600 [INFO] Saved 0 addresses to D:\GITHUB PROJECTSS BACKED UP\Ken Automation\scripts\output\gmgn_addresses.csv

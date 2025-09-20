@@ -1,0 +1,15 @@
+{
+  "name": "ken-automation-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GMGN scraper using puppeteer-extra with stealth",
+  "scripts": {
+    "start": "node gmgn_puppeteer.js"
+  },
+  "dependencies": {
+    "puppeteer-core": "^22.12.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

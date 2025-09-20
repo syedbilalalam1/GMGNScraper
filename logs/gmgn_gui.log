@@ -1,0 +1,892 @@
+2025-09-15 15:27:42,319 [INFO] App started
+2025-09-15 15:27:44,096 [INFO] Start clicked
+2025-09-15 15:27:44,097 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100
+2025-09-15 15:28:32,248 [ERROR] Scrape failed: RetryError[<Future at 0x1a58a267310 state=finished raised Error>]
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 147, in scrape_gmgn
+    addrs = await _collect_addresses_by_copy(page, expected_count=expected_count)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 55, in _collect_addresses_by_copy
+    count = await copy_icon_locator.count()
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\async_api\_generated.py", line 16233, in count
+    return mapping.from_maybe_impl(await self._impl_obj.count())
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_locator.py", line 392, in count
+    return await self._frame._query_count(self._selector)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_frame.py", line 128, in _query_count
+    return await self._channel.send("queryCount", {"selector": selector})
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Locator.count: Unexpected token "=" while parsing selector "[class*='cursor-pointer'][class*='hover:text'] svg, css=svg.cursor-pointer, css=button[aria-label*='copy' i], css=[data-testid*='copy' i]"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 85, in run_scrape
+    addrs = scrape_gmgn_sync(url=self.url_var.get(), expected_count=self.count_var.get())
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 171, in scrape_gmgn_sync
+    return asyncio.run(scrape_gmgn(url=url, expected_count=expected_count))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x1a58a267310 state=finished raised Error>]
+2025-09-15 15:39:31,287 [INFO] App started
+2025-09-15 15:39:32,716 [INFO] Start clicked
+2025-09-15 15:39:32,719 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:40:11,424 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:43:09,382 [INFO] App started
+2025-09-15 15:43:10,707 [INFO] Start clicked
+2025-09-15 15:43:10,710 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:43:34,867 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:43:37,796 [INFO] Start clicked
+2025-09-15 15:43:37,797 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:44:02,577 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:44:05,482 [INFO] Start clicked
+2025-09-15 15:44:05,485 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:44:30,317 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:44:32,663 [INFO] Start clicked
+2025-09-15 15:44:32,664 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:45:22,176 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:56:17,658 [INFO] App started
+2025-09-15 15:56:18,834 [INFO] Start clicked
+2025-09-15 15:56:18,838 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:56:45,503 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 15:56:47,597 [INFO] Start clicked
+2025-09-15 15:56:47,598 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 15:57:15,200 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 17:04:28,355 [INFO] App started
+2025-09-15 17:04:53,268 [INFO] Start clicked
+2025-09-15 17:04:53,271 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 17:04:54,257 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:04:55,364 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=13868
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=13868
+
+2025-09-15 17:05:39,713 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 17:17:15,608 [INFO] App started
+2025-09-15 17:17:18,415 [INFO] Start clicked
+2025-09-15 17:17:18,418 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 17:17:24,204 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:17:24,598 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=6000
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=6000
+
+2025-09-15 17:17:49,971 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 17:17:54,021 [INFO] Start clicked
+2025-09-15 17:17:54,025 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True
+2025-09-15 17:17:54,507 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:17:54,718 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=12252
+[pid=12252][err] Old Headless mode has been removed from the Chrome binary. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+[pid=12252][err] 
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=12252
+  - [pid=12252][err] Old Headless mode has been removed from the Chrome binary. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+  - [pid=12252][err] 
+
+2025-09-15 17:17:56,412 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:17:56,608 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=12752
+[pid=12752][err] Old Headless mode has been removed from the Chrome binary. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+[pid=12752][err] 
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=12752
+  - [pid=12752][err] Old Headless mode has been removed from the Chrome binary. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+  - [pid=12752][err] 
+
+2025-09-15 17:17:56,814 [ERROR] Scrape failed: RetryError[<Future at 0x279206c0bb0 state=finished raised Error>]
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 251, in scrape_gmgn
+    browser = await pw.chromium.launch(headless=headless, channel="msedge")
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\async_api\_generated.py", line 14119, in launch
+    await self._impl_obj.launch(
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_browser_type.py", line 95, in launch
+    Browser, from_channel(await self._channel.send("launch", params))
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 59, in send
+    return await self._connection.wrap_api_call(
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\playwright\_impl\_connection.py", line 514, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: BrowserType.launch: Chromium distribution 'msedge' is not found at C:\Users\Bilal\AppData\Local\Microsoft\Edge\Application\msedge.exe
+Run "playwright install msedge"
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 106, in run_scrape
+    addrs = scrape_gmgn_sync(
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\src\ken_automation\scrapers\gmgn_scraper.py", line 343, in scrape_gmgn_sync
+    return asyncio.run(
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 189, in async_wrapped
+    return await copy(fn, *args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\venv\lib\site-packages\tenacity\__init__.py", line 419, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x279206c0bb0 state=finished raised Error>]
+2025-09-15 17:31:59,387 [INFO] App started
+2025-09-15 17:32:02,426 [INFO] Start clicked
+2025-09-15 17:32:02,429 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 17:32:03,379 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:32:04,402 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=9260
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=9260
+
+2025-09-15 17:32:55,538 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 17:32:57,596 [INFO] Start clicked
+2025-09-15 17:32:57,599 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True
+2025-09-15 17:32:58,443 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:33:00,257 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --headless=new --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=8368
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --profile-directory=Profile 53 --headless=new --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=8368
+
+2025-09-15 17:33:25,907 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 17:35:33,328 [INFO] App started
+2025-09-15 17:35:34,722 [INFO] Start clicked
+2025-09-15 17:35:34,726 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 17:35:40,555 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 17:35:41,239 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=6968
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=6968
+
+2025-09-15 18:04:11,432 [INFO] App started
+2025-09-15 18:04:31,908 [INFO] App started
+2025-09-15 18:04:33,943 [INFO] Start clicked
+2025-09-15 18:04:33,946 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 18:04:33,947 [ERROR] Scrape failed: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 111, in run_scrape
+    addrs = scrape_gmgn_sync(
+TypeError: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+2025-09-15 18:04:39,229 [INFO] Start clicked
+2025-09-15 18:04:39,233 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True
+2025-09-15 18:04:39,233 [ERROR] Scrape failed: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 111, in run_scrape
+    addrs = scrape_gmgn_sync(
+TypeError: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+2025-09-15 18:04:42,037 [INFO] Start clicked
+2025-09-15 18:04:42,040 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True
+2025-09-15 18:04:42,040 [ERROR] Scrape failed: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 111, in run_scrape
+    addrs = scrape_gmgn_sync(
+TypeError: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+2025-09-15 18:04:44,205 [INFO] Start clicked
+2025-09-15 18:04:44,208 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 18:04:44,209 [ERROR] Scrape failed: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+Traceback (most recent call last):
+  File "E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\scripts\gmgn_gui.py", line 111, in run_scrape
+    addrs = scrape_gmgn_sync(
+TypeError: scrape_gmgn_sync() got an unexpected keyword argument 'cdp_url'
+2025-09-15 18:07:22,724 [INFO] App started
+2025-09-15 18:07:33,960 [INFO] Start clicked
+2025-09-15 18:07:33,964 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False
+2025-09-15 18:07:35,001 [INFO] Launching persistent Chrome with user_data_dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data profile_arg=--profile-directory=Profile 53
+2025-09-15 18:07:36,190 [WARNING] Persistent profile launch failed, falling back to regular context: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+<launched> pid=15052
+[pid=15052][out] Opening in existing browser session.
+Call log:
+<launching> C:\Program Files\Google\Chrome\Application\chrome.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-default-apps --disable-dev-shm-usage --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --profile-directory=Profile 53 --user-data-dir=C:\Users\Bilal\AppData\Local\Google\Chrome\User Data --remote-debugging-pipe about:blank
+  - <launched> pid=15052
+  - [pid=15052][out] Opening in existing browser session.
+
+2025-09-15 18:08:05,027 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:23:09,560 [INFO] App started
+2025-09-15 18:37:54,579 [INFO] Start clicked
+2025-09-15 18:37:54,583 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:37:54,584 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:38:05,616 [WARNING] puppeteer stderr: Error: Failed to launch the browser process!
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:310:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-09-15 18:38:05,625 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:38:29,110 [INFO] Start clicked
+2025-09-15 18:38:29,113 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:38:29,115 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:38:30,226 [WARNING] puppeteer stderr: Error: Failed to launch the browser process!
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+
+    at ChildProcess.onClose (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:310:24)
+    at ChildProcess.emit (node:events:530:35)
+    at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-09-15 18:38:30,229 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:51:58,685 [INFO] App started
+2025-09-15 18:52:00,817 [INFO] Start clicked
+2025-09-15 18:52:00,821 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:52:00,823 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:52:03,217 [WARNING] puppeteer stderr: TypeError: browser.createIncognitoBrowserContext is not a function
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:143:33)
+ERROR: The process with PID 16120 (child process of PID 5024) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 15780 (child process of PID 5024) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 436 (child process of PID 5024) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:188:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:188:11
+
+Node.js v22.11.0
+2025-09-15 18:52:03,221 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:52:43,681 [INFO] Start clicked
+2025-09-15 18:52:43,684 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:52:43,687 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --cdp http://localhost:9222/
+2025-09-15 18:52:44,772 [WARNING] puppeteer stderr: TypeError: Failed to fetch browser webSocket URL from http://localhost:9222/json/version: fetch failed
+    at node:internal/deps/undici/undici:13392:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getWSEndpoint (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:94:24)
+    at async getConnectionTransport (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:81:31)
+    at async _connectToBrowser (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:50:50)
+    at async PuppeteerExtra.connect (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-extra\dist\index.cjs.js:151:25)
+    at async main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:115:15)
+2025-09-15 18:52:44,775 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:53:02,312 [INFO] Start clicked
+2025-09-15 18:53:02,315 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:53:02,316 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --cdp http://localhost:9222/
+2025-09-15 18:53:03,297 [WARNING] puppeteer stderr: TypeError: Failed to fetch browser webSocket URL from http://localhost:9222/json/version: fetch failed
+    at node:internal/deps/undici/undici:13392:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getWSEndpoint (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:94:24)
+    at async getConnectionTransport (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:81:31)
+    at async _connectToBrowser (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:50:50)
+    at async PuppeteerExtra.connect (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-extra\dist\index.cjs.js:151:25)
+    at async main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:115:15)
+2025-09-15 18:53:03,299 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:53:10,269 [INFO] Start clicked
+2025-09-15 18:53:10,271 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:53:10,278 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --cdp http://localhost:9222/
+2025-09-15 18:53:11,261 [WARNING] puppeteer stderr: TypeError: Failed to fetch browser webSocket URL from http://localhost:9222/json/version: fetch failed
+    at node:internal/deps/undici/undici:13392:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async getWSEndpoint (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:94:24)
+    at async getConnectionTransport (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:81:31)
+    at async _connectToBrowser (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\common\BrowserConnector.js:50:50)
+    at async PuppeteerExtra.connect (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-extra\dist\index.cjs.js:151:25)
+    at async main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:115:15)
+2025-09-15 18:53:11,263 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:53:19,000 [INFO] Start clicked
+2025-09-15 18:53:19,003 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:53:19,004 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:53:21,194 [WARNING] puppeteer stderr: TypeError: browser.createIncognitoBrowserContext is not a function
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:143:33)
+ERROR: The process with PID 13992 (child process of PID 15556) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:188:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:188:11
+
+Node.js v22.11.0
+2025-09-15 18:53:21,315 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:55:21,477 [INFO] Start clicked
+2025-09-15 18:55:21,480 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:55:21,483 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:56:31,353 [INFO] Saved 100 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 18:57:02,949 [INFO] Start clicked
+2025-09-15 18:57:02,950 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 18:57:02,954 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53
+2025-09-15 18:57:22,306 [WARNING] puppeteer stderr: TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at next (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-extra-plugin-stealth\evasions\sourceurl\index.js:34:41)
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-extra-plugin-stealth\evasions\sourceurl\index.js:67:18)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:190:22)
+ERROR: The process with PID 14616 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 12992 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 14696 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 14304 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 7448 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 15264 (child process of PID 12960) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:214:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:214:11
+
+Node.js v22.11.0
+2025-09-15 18:57:22,319 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:06:02,434 [INFO] App started
+2025-09-15 19:06:05,995 [INFO] Start clicked
+2025-09-15 19:06:05,998 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:06:06,001 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:07:18,833 [WARNING] puppeteer stderr: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+2025-09-15 19:07:18,835 [INFO] Saved 100 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:07:54,545 [INFO] App started
+2025-09-15 19:07:56,212 [INFO] Start clicked
+2025-09-15 19:07:56,215 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:07:56,217 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:08:49,660 [WARNING] puppeteer stderr: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:255:22)
+ERROR: The process with PID 1196 (child process of PID 5148) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 7444 (child process of PID 5148) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 11272 (child process of PID 5148) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:282:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:282:11
+
+Node.js v22.11.0
+2025-09-15 19:08:49,664 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:08:51,625 [INFO] Start clicked
+2025-09-15 19:08:51,629 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:08:51,631 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:09:28,733 [WARNING] puppeteer stderr: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:255:22)
+ERROR: The process with PID 10728 (child process of PID 15844) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 10792 (child process of PID 15844) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 2344 (child process of PID 15844) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:282:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:282:11
+
+Node.js v22.11.0
+2025-09-15 19:09:28,744 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:10:54,043 [INFO] Start clicked
+2025-09-15 19:10:54,046 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:10:54,048 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:12:28,781 [INFO] App started
+2025-09-15 19:12:30,240 [INFO] Start clicked
+2025-09-15 19:12:30,243 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:12:30,245 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:13:14,622 [WARNING] puppeteer stderr: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:288:22)
+ERROR: The process with PID 3880 (child process of PID 884) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 7444 (child process of PID 884) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 10296 (child process of PID 884) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:318:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:318:11
+
+Node.js v22.11.0
+2025-09-15 19:13:14,627 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:16:16,553 [INFO] Start clicked
+2025-09-15 19:16:16,557 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=True engine=puppeteer
+2025-09-15 19:16:16,561 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless true --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:17:00,616 [INFO] App started
+2025-09-15 19:17:04,023 [INFO] Start clicked
+2025-09-15 19:17:04,027 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 19:17:04,029 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:17:44,713 [WARNING] puppeteer stderr: [puppeteer] Launching Chrome with profile...
+Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+[puppeteer] Opening gmgn.ai root...
+[puppeteer] Navigating to target...
+TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:293:22)
+ERROR: The process with PID 12272 (child process of PID 13832) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 13936 (child process of PID 13832) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 2068 (child process of PID 13832) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 4684 (child process of PID 13832) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:329:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:329:11
+
+Node.js v22.11.0
+2025-09-15 19:17:44,721 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:49:05,927 [INFO] App started
+2025-09-15 19:49:08,077 [INFO] Start clicked
+2025-09-15 19:49:08,099 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer force=False
+2025-09-15 19:49:08,103 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:50:01,718 [WARNING] puppeteer stderr: [puppeteer] Launching Chrome with profile...
+Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+[puppeteer] Opening gmgn.ai root...
+[puppeteer] Navigating to target...
+[puppeteer] Waiting for addresses to appear...
+[puppeteer] Extracting addresses...
+[puppeteer] Done. Found 100 addresses.
+2025-09-15 19:50:01,720 [INFO] Saved 100 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:50:06,044 [INFO] Force Scrape clicked
+2025-09-15 19:50:06,053 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer force=True
+2025-09-15 19:50:06,054 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --force --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:50:14,641 [WARNING] puppeteer stderr: [puppeteer] Launching Chrome with profile...
+Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+[puppeteer] Opening gmgn.ai root...
+[puppeteer] Navigating to target...
+[puppeteer] Extracting addresses...
+[puppeteer] Done. Found 0 addresses.
+2025-09-15 19:50:14,644 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 19:50:18,230 [INFO] Start clicked
+2025-09-15 19:50:18,235 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer force=False
+2025-09-15 19:50:18,237 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:51:16,724 [INFO] App started
+2025-09-15 19:51:19,403 [INFO] Start clicked
+2025-09-15 19:51:19,407 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer force=False
+2025-09-15 19:51:19,409 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 19:51:54,622 [WARNING] puppeteer stderr: [puppeteer] Launching Chrome with profile...
+Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+[puppeteer] Opening gmgn.ai root...
+[puppeteer] Navigating to target...
+TargetCloseError: Protocol error (Input.dispatchMouseEvent): Session closed. Most likely the page has been closed.
+    at CdpCDPSession.send (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CDPSession.js:64:35)
+    at CdpMouse.wheel (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Input.js:360:28)
+    at main (file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:296:22)
+ERROR: The process with PID 1620 (child process of PID 16296) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 2260 (child process of PID 16296) could not be terminated.
+Reason: There is no running instance of the task.
+
+ERROR: The process with PID 14556 (child process of PID 16296) could not be terminated.
+Reason: There is no running instance of the task.
+
+E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282
+                throw new Error(`${PROCESS_ERROR_EXPLANATION}\nError cause: ${isErrorLike(error) ? error.stack : error}`);
+                      ^
+
+Error: Puppeteer was unable to kill the process which ran the browser binary.
+This means that, on future Puppeteer launches, Puppeteer might not be able to launch the browser.
+Please check your open processes and ensure that the browser processes that Puppeteer launched have been killed.
+If you think this is a bug, please report it on the Puppeteer issue tracker.
+Error cause: Error: kill EPERM
+    at ChildProcess.kill (node:internal/child_process:511:26)
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:262:46)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:334:11
+    at Process.kill (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:282:23)
+    at #onDriverProcessExit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:220:14)
+    at E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:65:20
+    at Array.forEach (<anonymous>)
+    at process.exit (E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\node_modules\@puppeteer\browsers\lib\cjs\launch.js:64:39)
+    at process.emit (node:events:518:28)
+    at process.exit (node:internal/process/per_thread:183:15)
+    at file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:334:11
+
+Node.js v22.11.0
+2025-09-15 19:51:54,626 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 20:04:29,002 [INFO] App started
+2025-09-15 20:04:31,041 [INFO] Start clicked
+2025-09-15 20:04:31,046 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 20:04:31,049 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 20:04:32,189 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-15 20:04:32,472 [INFO] puppeteer: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+2025-09-15 20:04:33,669 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-15 20:04:38,382 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-15 20:05:15,463 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-15 20:05:15,750 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-15 20:05:15,751 [INFO] puppeteer: [STATUS] COUNTDOWN 10
+2025-09-15 20:05:16,765 [INFO] puppeteer: [STATUS] COUNTDOWN 9
+2025-09-15 20:05:17,780 [INFO] puppeteer: [STATUS] COUNTDOWN 8
+2025-09-15 20:05:18,787 [INFO] puppeteer: [STATUS] COUNTDOWN 7
+2025-09-15 20:05:19,786 [INFO] puppeteer: [STATUS] COUNTDOWN 6
+2025-09-15 20:05:20,797 [INFO] puppeteer: [STATUS] COUNTDOWN 5
+2025-09-15 20:05:21,804 [INFO] puppeteer: [STATUS] COUNTDOWN 4
+2025-09-15 20:05:22,805 [INFO] puppeteer: [STATUS] COUNTDOWN 3
+2025-09-15 20:05:23,809 [INFO] puppeteer: [STATUS] COUNTDOWN 2
+2025-09-15 20:05:24,816 [INFO] puppeteer: [STATUS] COUNTDOWN 1
+2025-09-15 20:05:25,828 [INFO] puppeteer: [puppeteer] Waiting for addresses to appear...
+2025-09-15 20:05:27,019 [INFO] puppeteer: [puppeteer] Extracting addresses...
+2025-09-15 20:05:27,434 [INFO] puppeteer: [puppeteer] Done. Found 100 addresses.
+2025-09-15 20:05:27,975 [INFO] Saved 100 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 20:05:31,098 [INFO] Start clicked
+2025-09-15 20:05:31,099 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 20:05:31,111 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 20:05:32,163 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-15 20:05:32,432 [INFO] puppeteer: Profile may be locked; launching without profile. Session will be restored from saved cookies if available.
+2025-09-15 20:05:33,418 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-15 20:05:37,093 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-15 20:06:15,193 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-15 20:06:15,237 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-15 20:06:15,238 [INFO] puppeteer: [STATUS] COUNTDOWN 10
+2025-09-15 20:06:16,243 [INFO] puppeteer: [STATUS] COUNTDOWN 9
+2025-09-15 20:06:17,247 [INFO] puppeteer: [STATUS] COUNTDOWN 8
+2025-09-15 20:06:18,257 [INFO] puppeteer: [STATUS] COUNTDOWN 7
+2025-09-15 20:06:19,264 [INFO] puppeteer: [STATUS] COUNTDOWN 6
+2025-09-15 20:06:20,275 [INFO] puppeteer: [STATUS] COUNTDOWN 5
+2025-09-15 20:06:21,276 [INFO] puppeteer: [STATUS] COUNTDOWN 4
+2025-09-15 20:06:22,277 [INFO] puppeteer: [STATUS] COUNTDOWN 3
+2025-09-15 20:06:23,286 [INFO] puppeteer: [STATUS] COUNTDOWN 2
+2025-09-15 20:06:24,291 [INFO] puppeteer: [STATUS] COUNTDOWN 1
+2025-09-15 20:06:25,301 [INFO] puppeteer: [puppeteer] Waiting for addresses to appear...
+2025-09-15 20:06:30,435 [INFO] puppeteer: [puppeteer] Extracting addresses...
+2025-09-15 20:06:30,701 [INFO] puppeteer: [puppeteer] Done. Found 100 addresses.
+2025-09-15 20:06:31,567 [INFO] Saved 100 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-15 20:48:06,953 [INFO] App started
+2025-09-15 20:49:01,546 [INFO] Start clicked
+2025-09-15 20:49:01,695 [INFO] Scraping URL=https://gmgn.ai/sol/address/uZy0WmVx_BPr6KE6n23YHoH7arY6DMxbAdqHyQrAqzYPN2FvDGDbU count=100 headless=False engine=puppeteer
+2025-09-15 20:49:01,717 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/sol/address/uZy0WmVx_BPr6KE6n23YHoH7arY6DMxbAdqHyQrAqzYPN2FvDGDbU --count 100 --headless false --panels --outdir E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 20:58:32,632 [INFO] App started
+2025-09-15 20:59:48,505 [INFO] Start clicked
+2025-09-15 20:59:48,509 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-15 20:59:48,510 [INFO] Running puppeteer-extra script: node E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\node_scraper\gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\.sessions\gmgn_ai_session.json
+2025-09-15 20:59:50,871 [INFO] puppeteer: file:///E:/GITHUB%20PROJECTS/Uncommitted%20Projects%20(Client-Based)/Ken%20Automation/node_scraper/gmgn_puppeteer.js:455
+2025-09-15 20:59:50,875 [INFO] puppeteer: return '';
+2025-09-15 20:59:50,876 [INFO] puppeteer: ^^^^^^
+2025-09-15 20:59:50,876 [INFO] puppeteer: SyntaxError: Illegal return statement
+2025-09-15 20:59:50,877 [INFO] puppeteer: at compileSourceTextModule (node:internal/modules/esm/utils:340:16)
+2025-09-15 20:59:50,877 [INFO] puppeteer: at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:102:18)
+2025-09-15 20:59:50,880 [INFO] puppeteer: at #translate (node:internal/modules/esm/loader:433:12)
+2025-09-15 20:59:50,883 [INFO] puppeteer: at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:480:27)
+2025-09-15 20:59:50,983 [INFO] puppeteer: at async ModuleJob._link (node:internal/modules/esm/module_job:112:19)
+2025-09-15 20:59:50,984 [INFO] puppeteer: Node.js v22.11.0
+2025-09-15 20:59:51,127 [INFO] Saved 0 addresses to E:\GITHUB PROJECTS\Uncommitted Projects (Client-Based)\Ken Automation\output\gmgn_addresses.csv
+2025-09-17 23:45:39,219 [INFO] App started
+2025-09-17 23:45:44,591 [INFO] Start clicked
+2025-09-17 23:45:44,592 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-17 23:45:44,594 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-17 23:45:44,641 [INFO] puppeteer: file:///mnt/C/LINUX%20FILES/GITHUB%20PROJECTSS%20BACKED%20UP/Ken%20Automation/node_scraper/gmgn_puppeteer.js:455
+2025-09-17 23:45:44,641 [INFO] puppeteer: return '';
+2025-09-17 23:45:44,641 [INFO] puppeteer: ^^^^^^
+2025-09-17 23:45:44,642 [INFO] puppeteer: SyntaxError: Illegal return statement
+2025-09-17 23:45:44,642 [INFO] puppeteer: at compileSourceTextModule (node:internal/modules/esm/utils:357:16)
+2025-09-17 23:45:44,642 [INFO] puppeteer: at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:109:18)
+2025-09-17 23:45:44,642 [INFO] puppeteer: at #translate (node:internal/modules/esm/loader:575:20)
+2025-09-17 23:45:44,642 [INFO] puppeteer: at afterLoad (node:internal/modules/esm/loader:625:29)
+2025-09-17 23:45:44,643 [INFO] puppeteer: at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:630:12)
+2025-09-17 23:45:44,643 [INFO] puppeteer: at #createModuleJob (node:internal/modules/esm/loader:654:36)
+2025-09-17 23:45:44,643 [INFO] puppeteer: at #getJobFromResolveResult (node:internal/modules/esm/loader:354:34)
+2025-09-17 23:45:44,643 [INFO] puppeteer: at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:319:41)
+2025-09-17 23:45:44,643 [INFO] puppeteer: at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:696:25)
+2025-09-17 23:45:44,644 [INFO] puppeteer: Node.js v24.8.0
+2025-09-17 23:45:44,645 [INFO] Saved 0 addresses to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/gmgn_addresses.csv
+2025-09-18 00:02:05,692 [INFO] App started
+2025-09-18 00:02:17,981 [INFO] Start clicked
+2025-09-18 00:02:17,984 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-18 00:02:17,986 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:02:19,882 [INFO] puppeteer: file:///mnt/C/LINUX%20FILES/GITHUB%20PROJECTSS%20BACKED%20UP/Ken%20Automation/node_scraper/gmgn_puppeteer.js:455
+2025-09-18 00:02:19,883 [INFO] puppeteer: return '';
+2025-09-18 00:02:19,883 [INFO] puppeteer: ^^^^^^
+2025-09-18 00:02:19,883 [INFO] puppeteer: SyntaxError: Illegal return statement
+2025-09-18 00:02:19,884 [INFO] puppeteer: at compileSourceTextModule (node:internal/modules/esm/utils:357:16)
+2025-09-18 00:02:19,884 [INFO] puppeteer: at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:109:18)
+2025-09-18 00:02:19,884 [INFO] puppeteer: at #translate (node:internal/modules/esm/loader:575:20)
+2025-09-18 00:02:19,884 [INFO] puppeteer: at afterLoad (node:internal/modules/esm/loader:625:29)
+2025-09-18 00:02:19,885 [INFO] puppeteer: at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:630:12)
+2025-09-18 00:02:19,917 [INFO] puppeteer: at #createModuleJob (node:internal/modules/esm/loader:654:36)
+2025-09-18 00:02:19,917 [INFO] puppeteer: at #getJobFromResolveResult (node:internal/modules/esm/loader:354:34)
+2025-09-18 00:02:19,918 [INFO] puppeteer: at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:319:41)
+2025-09-18 00:02:19,918 [INFO] puppeteer: at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:696:25)
+2025-09-18 00:02:19,918 [INFO] Saved 0 addresses to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/gmgn_addresses.csv
+2025-09-18 00:02:19,918 [INFO] puppeteer: Node.js v24.8.0
+2025-09-18 00:07:48,670 [INFO] App started
+2025-09-18 00:07:53,316 [INFO] Start clicked
+2025-09-18 00:07:53,317 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-18 00:07:53,319 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:07:58,817 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-18 00:08:10,460 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-18 00:08:18,922 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-18 00:08:55,563 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-18 00:08:55,602 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-18 00:08:57,458 [INFO] puppeteer: [puppeteer] Done. Found 100 addresses.
+2025-09-18 00:08:59,460 [INFO] Saved 100 addresses to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/gmgn_addresses.csv
+2025-09-18 00:10:28,506 [ERROR] Failed to open logs folder: [Errno 2] No such file or directory: 'explorer'
+2025-09-18 00:10:31,898 [ERROR] Failed to open logs folder: [Errno 2] No such file or directory: 'explorer'
+2025-09-18 00:13:12,790 [INFO] Start clicked
+2025-09-18 00:13:12,792 [INFO] Scraping URL=https://gmgn.ai/sol/address/uZy0WmVx_9iQikUHRe69UScUaytfQabQDmZRqtTkjCEF94ZV5pump count=100 headless=False engine=puppeteer
+2025-09-18 00:13:12,794 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/sol/address/uZy0WmVx_9iQikUHRe69UScUaytfQabQDmZRqtTkjCEF94ZV5pump --count 100 --headless false --panels --outdir /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:13:14,173 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-18 00:13:17,168 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-18 00:13:23,815 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-18 00:13:57,412 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-18 00:13:57,439 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-18 00:13:57,555 [INFO] puppeteer: [puppeteer] Saved panels to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels
+2025-09-18 00:13:57,590 [INFO] puppeteer: [puppeteer] Done. Panels saved.
+2025-09-18 00:33:50,719 [INFO] App started
+2025-09-18 00:34:27,475 [INFO] Start clicked
+2025-09-18 00:34:27,480 [INFO] Scraping URL=https://gmgn.ai/trade/uZy0WmVx?chain=sol count=100 headless=False engine=puppeteer
+2025-09-18 00:34:27,483 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/trade/uZy0WmVx?chain=sol --count 100 --headless false --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:34:29,588 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-18 00:34:32,395 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-18 00:34:38,161 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-18 00:35:10,302 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-18 00:35:10,686 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-18 00:35:12,165 [INFO] puppeteer: [puppeteer] Done. Found 100 addresses.
+2025-09-18 00:35:14,053 [INFO] Saved 100 addresses to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/gmgn_addresses.csv
+2025-09-18 00:36:28,528 [INFO] Start clicked
+2025-09-18 00:36:28,530 [INFO] Scraping URL=https://gmgn.ai/sol/address/uZy0WmVx_3CDAQnxnsLPREKNaiL3LxTX8Ep1TNfmSFPARbaqhWhQx count=100 headless=False engine=puppeteer
+2025-09-18 00:36:28,532 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/sol/address/uZy0WmVx_3CDAQnxnsLPREKNaiL3LxTX8Ep1TNfmSFPARbaqhWhQx --count 100 --headless false --panels --outdir /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:36:29,831 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-18 00:36:32,234 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-18 00:36:37,220 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-18 00:37:12,620 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-18 00:37:12,732 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-18 00:37:12,865 [INFO] puppeteer: [puppeteer] Saved panels to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels
+2025-09-18 00:37:14,342 [INFO] puppeteer: [puppeteer] Done. Panels saved.
+2025-09-18 00:37:32,792 [INFO] Start clicked
+2025-09-18 00:37:32,796 [INFO] Scraping URL=https://gmgn.ai/sol/address/uZy0WmVx_3CDAQnxnsLPREKNaiL3LxTX8Ep1TNfmSFPARbaqhWhQx count=100 headless=False engine=puppeteer
+2025-09-18 00:37:32,799 [INFO] Running puppeteer-extra script: node /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/node_scraper/gmgn_puppeteer.js --url https://gmgn.ai/sol/address/uZy0WmVx_3CDAQnxnsLPREKNaiL3LxTX8Ep1TNfmSFPARbaqhWhQx --count 100 --headless false --panels --outdir /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels --profile C:\\Users\\Bilal\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 53 --session /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/.sessions/gmgn_ai_session.json
+2025-09-18 00:37:34,258 [INFO] puppeteer: [puppeteer] Launching Chrome with profile...
+2025-09-18 00:37:36,761 [INFO] puppeteer: [puppeteer] Opening gmgn.ai root...
+2025-09-18 00:37:42,909 [INFO] puppeteer: [puppeteer] Navigating to target...
+2025-09-18 00:38:15,292 [INFO] puppeteer: [STATUS] PAGE_OPENED
+2025-09-18 00:38:15,383 [INFO] puppeteer: [STATUS] LOGGED_IN
+2025-09-18 00:38:15,779 [INFO] puppeteer: [puppeteer] Saved panels to /mnt/C/LINUX FILES/GITHUB PROJECTSS BACKED UP/Ken Automation/output/panels
+2025-09-18 00:38:17,428 [INFO] puppeteer: [puppeteer] Done. Panels saved.
