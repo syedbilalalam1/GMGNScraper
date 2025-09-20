@@ -1,5 +1,5 @@
 # GMGN Scraper Suite
-
+<img width="1919" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ef877637-e83a-4bb1-bfec-c177e18f5dc7" />
 ## Overview
 GMGN Scraper is a toolkit for scraping and extracting data from [gmgn.ai](https://gmgn.ai), a Solana-based trading analytics platform. It provides both Python and Node.js tools to collect wallet addresses, trading panels, recent PnL, and deployed token data for further analysis or automation.
 
