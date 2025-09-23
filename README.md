@@ -21,7 +21,7 @@ GMGN Scraper is a toolkit for scraping and extracting data from [gmgn.ai](https:
 - `scripts/gmgn_cli.py` — Command-line interface for scraping addresses
 - `scripts/gmgn_gui.py` — Tkinter GUI for scraping addresses
 - `node_scraper/gmgn_puppeteer.js` — Node.js Puppeteer script for scraping panels and addresses
-- `output/` — Scraped CSV/JSON data (addresses, panels, PnL, tokens)
+- `output/` — Scraped CSV/JSON data (addresses, panels, PnL, tokens
 
 ---
 
